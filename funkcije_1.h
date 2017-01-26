@@ -8,16 +8,19 @@
 #include "strukture.h"
 
 // 1. OPCIJA - FORMIRANJE PRAZNE DATOTEKE
-FILE *formiraj_datoteku(DATOTEKA* f);
+void *formiraj_datoteku(DATOTEKA* );
 // 2. OPCIJA - IZBOR AKTIVNE DATOTEKE
-FILE *otvori_postojecu();
+void *otvori_postojecu(DATOTEKA *);
 // 3. OPCIJA - ISPIS AKTIVNE DATOTEKE
-void ispisi_aktivnu(char *aktivna);
+void ispisi_aktivnu(char *);
 // 4. OPCIJA - FORMIRANJE SERIJSKE DATOTEKE 
-void formiraj_serijsku(char *ime_serijske);
+void formiraj_serijsku(char *);
 
 // RANDOM FUNCKCIJE KOJE TREBAJU JER ETO
-void iscitaj(DATOTEKA* f);
-void unos_novog_termina(TERMIN *novi);
-void ucitaj_indeksnu_zonu_iz_DTTK(char *dttk, int ispisStabla);
+void iscitaj(DATOTEKA* );
+void unos_novog_termina(TERMIN *);
+void ucitaj_indeksnu_zonu_iz_DTTK(char *, int);
+//void ispisi_primarnu_zonu();
+//void ispisi_zonu_podataka();
+
 #endif

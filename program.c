@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"funkcije.h"
-#include"primarna_zona.h"
+#include"funkcije_1.h"
+//#include"primarna_zona.h"
 #include"strukture.h"
 
-//Globalne promenljive
+//Globalne promenljive// lol?
 int kljuc;
 
 int main()
@@ -20,17 +20,16 @@ int main()
     printf("[1] Za unos nove prazne datoteke.\n");
     printf("[2] Za otvaranje vec postojece datoteke. \n");
     printf(" Izgled vase datoteke :");
-    ispisi_primarnu_zonu();
-    ispisi_zonu_podataka();
-    ispisi
+ //   ispisi_primarnu_zonu();
+ //    ispisi_zonu_podataka();
+
     printf("\n\n Odgovor >> "); 
     scanf("%d", &odg);
     switch(odg)
     {  
-      case 1 :  F.lokacija = formiraj_datoteku(F.lokacija);
+      case 1 :  formiraj_datoteku(&F);
                 break;
-      case 2 :  F.lokacija = otvori_postojecu();
-                iscitaj(F);
+      case 2 :  otvori_postojecu(&F);
                 break;
  
     }

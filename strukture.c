@@ -1,5 +1,4 @@
-#ifndef STRUKTURE_H_INCLUDED
-#define STRUKTURE_H_INCLUDED
+
 //Struktura datoteke
  typedef struct datoteka_st {
   char ime[30];
@@ -28,4 +27,3 @@
   
  }blok_1_zone;
 
-#endif

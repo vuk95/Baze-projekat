@@ -1,0 +1,1 @@
+Zameniti funkcije.c i funckije.h datoteke

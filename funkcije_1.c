@@ -1,40 +1,35 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#include"funkcije_1.h"
 
 // 1. OPCIJA - FORMIRANJE PRAZNE DATOTEKE
 // Korisnik unosi smo ime datoteke bez ekstenzije, to radi ova funckija. 
 // Zatim sa kreiranim imenom na disku stvara nova datoteka i otvara je u wb rezimu
-FILE *formiraj_datoteku(DATOTEKA* f)
+void formiraj_datoteku(DATOTEKA *f)
 {
   char ime_datoteke[20];
   printf("Unesite naziv vase datoteke: ");
   __fpurge(stdin);
   gets(ime_datoteke);
   strcat(ime_datoteke, ".txt");
-  strcpy(f.ime , ime_datoteke);
-  f.lokacija = fopen(ime_datoteke, "wb");
-  return f;
+  strcpy(f->ime , ime_datoteke);
+  f->lokacija = fopen(ime_datoteke, "wb");
 }
 // 2. OPCIJA - IZBOR AKTIVNE DATOTEKE
 // Korisnik unosi takodje samo ime bez ekstenzije.
 // Zatim se sa kreiranim imenom na disku pretrazuje i otvara je u rb rezimu
-FILE *otvori_postojecu()
+void otvori_postojecu(DATOTEKA *f)
 {
  char ime_datoteke[20];
  printf("Koja je vasa zelja? ");
  __fpurge(stdin);
  gets(ime_datoteke);
  strcat( ime_datoteke , ".txt");
- DATOTEKA* f;
- f.lokacija = fopen(ime_datoteke , "rb");
- strcpy(ime_datoteke, f.ime);
+ f->lokacija = fopen(ime_datoteke , "rb");
+ strcpy(f->ime, ime_datoteke);
 
- if( f.lokacija == NULL)
+ if( f->lokacija == NULL)
   {
     printf("Greska pri otvaranju!");
-    return NULL;
    }
- return f;
 }
 // 3. OPCIJA - ISPIS AKTIVNE DATOTEKE
 // Ispisuje je ime aktivne datoteke bez ekstenzije
